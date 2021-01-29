@@ -11,4 +11,10 @@ function reverseArrayInPlace(array){
 
 }
 
-module.exports = { reverseArrayInPlace } 
+function isPalindrome(str){
+
+    str = str.replace(/\W/g, '').toLowerCase();
+    return (str == str.split('').reverse().join(''));
+}
+
+module.exports = { reverseArrayInPlace, isPalindrome } 

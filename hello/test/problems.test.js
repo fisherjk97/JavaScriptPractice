@@ -63,6 +63,17 @@ if (TEST_MODE) {
       p.reverseArrayInPlace(startingArray);
       assert.deepEqual(startingArray, reversedArray, 'returns expected output');
     });
+
+
+
+    //string operations
+    it('should check if string is  palindrome', () => {
+        let str = 'racecar'
+        let result = p.isPalindrome(str);
+        assert(result, 'returns expected output');
+      });
+
+
   });
 
   mocha.run();
