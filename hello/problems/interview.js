@@ -74,6 +74,66 @@ function isAnagram(first, second){
 
 }
 
+function fizzBuzz(num){
+
+    for(let i = 1; i <= num; i++){
+        //check if the number is a multiple of 3 and 5
+        if(i %3 === 0 && i % 5 ===0){
+            console.log('fizzbuzz');
+        }else if (i % 3 === 0){//check if the number is a multiple of 3
+            console.log('fizz');
+        }else if (i % 5 === 0){
+            console.log('buzz');
+        }else{
+            console.log(i);
+        }
+    }
+
+}
+
+function findVowels(str){
+    let count = 0;
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    for(let char of str.toLowerCase()){
+        if(vowels.includes(char)){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+
+function fib(num){
+    /*
+    store the fibonacci sequence you're going to generate inside an aray 
+    and initialize it with the first two numbers of the sequence
+
+    */
+
+    const result = [0,1];
+    for(let i = 2; i <= num; i++){
+        //push the sum of the two numbers
+        //precedijng the position of i in the result array
+        //at the end of the result array
+        const prevNum1 = result[i -1];
+        const prevNum2 = result[i -2];
+        result.push(prevNum1 + prevNum2);
+    }
+
+    //return the lastvalue in the array. this is the final value
+    return result[num];
+}
+
+function fibRecursive(num){
+
+    //if num is either 0 or 1 return num
+    if(num <2){
+        return num;
+    }
+    return fibRecursive(num - 1) + fibRecursive(num - 2);
+}
+
 
 module.exports = { 
     reverseArrayInPlace, 
@@ -82,5 +142,9 @@ module.exports = {
     enqueue, 
     dequeue,
     duplicate,
-    isAnagram
+    isAnagram,
+    fizzBuzz,
+    findVowels,
+    fib,
+    fibRecursive
  } 

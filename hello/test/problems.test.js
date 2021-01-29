@@ -112,6 +112,27 @@ if (TEST_MODE) {
         assert(result, 'returns expected output');
       });
 
+      it('count the vowels', () => {
+        let str = 'jajejijoju';
+        let expected = 5;
+        let result = p.findVowels(str);
+        assert(result, 'returns expected output');
+      });
+
+      it('should fibonacci-ify', () => {
+        let num = 29
+        let expected = 514229;
+        let result = p.fib(num);
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
+      it('should fibonacci-ify with recursion', () => {
+        let num = 29
+        let expected = 514229;
+        let result = p.fibRecursive(num);
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
   });
 
   mocha.run();
