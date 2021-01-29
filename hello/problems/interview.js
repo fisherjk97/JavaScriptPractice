@@ -50,5 +50,20 @@ function dequeue(stackInput, stackOutput){
 
 }
 
+function duplicate(arr){
+    return arr.concat(arr);
+}
 
-module.exports = { reverseArrayInPlace, isPalindrome, reverseEachWord, enqueue, dequeue } 
+function isAnagram(first, second){
+    
+}
+
+
+module.exports = { 
+    reverseArrayInPlace, 
+    isPalindrome, 
+    reverseEachWord, 
+    enqueue, 
+    dequeue,
+    duplicate
+ } 

@@ -98,6 +98,13 @@ if (TEST_MODE) {
         assert.deepEqual(result, expected, 'returns expected output');
       });
 
+      it('should duplicate an array', () => {
+        let input = ["hello"];
+        let expected =  ["hello", "hello"];
+        let result = p.duplicate(input);
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
   });
 
   mocha.run();
