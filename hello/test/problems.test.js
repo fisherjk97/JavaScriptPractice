@@ -74,7 +74,68 @@ if (TEST_MODE) {
       });
 
 
+
+      it('reverse word in string', () => {
+        let str = 'this is a test'
+        let result = p.reverseEachWord(str, " ");
+        let expected = "test a is this";
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
+
+      it('should enqueue an item to a stack', () => {
+        let input = [];
+        let expected = ["hello"];
+        let result = p.enqueue(input, "hello")
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
+      it('should dequeue an item from the stack', () => {
+        let input = ["hello"];
+        let output = [];
+        let expected = "hello";
+        let result = p.dequeue(input, output)
+        assert.deepEqual(result, expected, 'returns expected output');
+      });
+
   });
 
   mocha.run();
 }
+
+
+/*Asset options*/
+
+/*
+
+assert() -- checks if value is true
+
+assert.deepEqual() -- checks if two values are equal
+
+assert.deepStrictEqual() -- checks if two values are equal, using the strict operator (====)
+
+assert.doesNotThrow
+
+assert.equal() -- checks if two values are equal using equal operator (==)
+
+assert.fail() -- throws an assertion error
+
+assert.ifError() -- throws a specified error if the specified error evalutates to true
+
+assert.notDeepEqual() -- checks if two values are not equal
+
+assert.notDeepStrictEqual() --  checks if two values are not equal, using the strict not equal operator (!==)
+
+assert.notEqual() -- checks if two values are not equal, using the not equal operator (!=)
+
+assert.notStrictEqual() --checks if two values are not equal, using the strict not equal (!==)
+
+assert.ok() = checks if value is true
+
+assert.strictEqual() -- checks if two varlues are equal, using the strict equal operator
+
+asser.throws()
+
+
+
+*/
