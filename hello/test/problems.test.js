@@ -105,6 +105,13 @@ if (TEST_MODE) {
         assert.deepEqual(result, expected, 'returns expected output');
       });
 
+      it('should be an anagram', () => {
+        let first = "Army";
+        let second = "Mary";
+        let result = p.isAnagram(first, second);
+        assert(result, 'returns expected output');
+      });
+
   });
 
   mocha.run();

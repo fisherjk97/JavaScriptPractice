@@ -55,7 +55,23 @@ function duplicate(arr){
 }
 
 function isAnagram(first, second){
+    //for case sensitivity, change both to lowercase
+    var a = first.toLowerCase();
+    var b = second.toLowerCase();
+
+    //sort the strings
     
+    a = a.split("").sort();//split turns it into an array
+    b = b.split("").sort();//split turns it into an array
+    //join the resulting array to a string.
+    
+    a = a.join("");//join back into a single word
+    b = b.join("")//join back into a single word
+    
+    //compare the results
+    return a === b;
+
+
 }
 
 
@@ -65,5 +81,6 @@ module.exports = {
     reverseEachWord, 
     enqueue, 
     dequeue,
-    duplicate
+    duplicate,
+    isAnagram
  } 
